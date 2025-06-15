@@ -1,0 +1,20 @@
+
+services:
+  nodea:
+    build: .
+    environment:
+      - ROLE=A
+      - IS_DISPATCHER=1
+    network_mode: "host"
+
+  nodeb:
+    build: .
+    environment:
+      - ROLE=B
+    network_mode: "host"
+
+  nodec:
+    build: .
+    environment:
+      - ROLE=C
+    network_mode: "host"
